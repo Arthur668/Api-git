@@ -13,12 +13,12 @@ fetch('https://api.github.com/users/Arthur668/repos')
 
   return (
     <View style={styles.container}>
-     <View style={styles.lista}>
-     <ul>
+     <View >
+     <ul style={styles.lista}>
       {repositories.map(repository => {
         return (
          
-         <li>
+         <li style={styles.li}>
             <h3>{repository.name}</h3>
           </li>
           
@@ -38,5 +38,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     display:"flex"
   },
-  
+  lista:{
+    display:"flex",
+    flexWrap:"wrap"
+  },
+  li:{
+    width:"50%"
+  }
 });
